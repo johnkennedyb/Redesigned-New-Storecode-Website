@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Dashboard - Storecode</title>
+</head>
+<body>
+    <header>
+        <h1>Storecode</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <!-- <a href="dashboard.html">Dashboard</a> -->
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <button onclick="logout()">Logout</button>
+
+        </nav>
+
+    </header>
+    <div id="dashboard-content"></div>
+    <section class="main-content">
+        <!-- Content for the dashboard page -->
+       
+
+            <!-- Display dashboard content only when the user is logged in -->
+            <h2>Welcome, <span id="username-display"></span>!</h2>
+            <h3>Your Information</h3>
+            <p>Username: <span id="user-username"></span></p>
+            <p>Password: ********</p>
+            
+            <!-- Add a link to the product adding page -->
+        <button><a href="add-product.html">Add Product</a></button>    
+    </section>
+    <footer>
+        <p>&copy; 2023 Storecode. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- <script>
+        // Retrieve and display the authenticated user's information
+        var usernameDisplay = document.getElementById('username-display');
+        var userUsernameDisplay = document.getElementById('user-username');
+
+        if (authenticatedUser) {
+            usernameDisplay.textContent = authenticatedUser.username;
+            userUsernameDisplay.textContent = authenticatedUser.username;
+        } else {
+            // Redirect to the login page if the user is not logged in
+            window.location.href = 'login.html';
+        }
+    </script> -->
+</body>
+</html>
+

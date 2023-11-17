@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Storecode</title>
+</head>
+<body>
+    <header>
+        <h1>Storecode</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <!-- <a href="dashboard.html">Dashboard</a> -->
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>    </header>
+
+        <section class="main-content">
+            <!-- Content for the "Add Product" page -->
+            <h2>Add Product</h2>
+            <form id="add-product-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" placeholder="Enter product name" required>
+    
+                <label for="product-link">Product Link:</label>
+                <input type="text" id="product-link" placeholder="Enter product link" required>
+    
+                <button type="button" onclick="addProduct()">Add Product</button>
+            </form>
+    
+          <!-- Display success or error messages -->
+<div id="result-message"></div>
+        </section>
+
+    <footer>
+        <p>&copy; 2023 Storecode. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Add product function
+        function addProduct() {
+            // Retrieve values from the form
+            var productName = document.getElementById('product-name').value;
+            var productLink = document.getElementById('product-link').value;
+    
+            // Check if both product name and link are provided
+            if (productName && productLink) {
+                // Save the product to localStorage
+                saveProduct(productName, productLink);
+    
+                // Display the updated list of products on the dashboard
+                displayProducts();
+    
+                // Display a success message
+                var resultMessage = document.getElementById('result-message');
+                resultMessage.textContent = 'Product added successfully!';
+                resultMessage.style.color = 'green';
+    
+                // Clear the form fields
+                document.getElementById('product-name').value = '';
+                document.getElementById('product-link').value = '';
+            } else {
+                // Display an error message if either the name or link is missing
+                var resultMessage = document.getElementById('result-message');
+                resultMessage.textContent = 'Please enter both product name and link.';
+                resultMessage.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>

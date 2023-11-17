@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Storecode</title>
+</head>
+<body>
+    <header>
+        <h1>Storecode</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <!-- <a href="dashboard.html">Dashboard</a> -->
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h2>Shop with Store Code</h2>
+        
+        <!-- Shop with Store Code Form -->
+        <form id="shopForm">
+            <label for="storeCode">Enter Code:</label>
+            <input type="text" id="storeCode" name="storeCode" required>
+
+            <button type="button" onclick="submitShopForm()">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Storecode. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
