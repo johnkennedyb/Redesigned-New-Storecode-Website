@@ -1,30 +1,58 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4); /* Body gradient background */
-    color: #343a40; /* Dark text color */
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    background-image: url('placeholder-image.jpg'); /* Replace 'background-image.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Prevent background from extending beyond the viewport */
+    z-index: 5000px;
 }
 
+
+
 header {
-    background: linear-gradient(45deg, #007bff, #0056b3); /* Header gradient background */
-    color: white;
-    text-align: center;
+    background-color: rgba(51, 51, 51, 0.8); /* Adding a semi-transparent black background to improve text readability */
+    color: #fff;
     padding: 1em;
+    text-align: center;
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    justify-content: space-around;
+    margin-top: 1em;
 }
 
 nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+
+}
+
+.main-content {
+    text-align: center;
+    padding: 2em;
+    color: #fff; /* Adding white text color for better contrast on the background */
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Adding a semi-transparent black background to improve text readability */
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+
+/* nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
     transition: color 0.3s;
-}
+} */
 
 nav a:hover {
     color: #ffd700; /* Yellow on hover */
@@ -105,3 +133,4 @@ button:hover {
 h1, h2, h3 {
     color: #007bff;
 }
+
