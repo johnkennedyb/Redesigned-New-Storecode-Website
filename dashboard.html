@@ -16,12 +16,11 @@
             <!-- <a href="dashboard.html">Dashboard</a> -->
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact Us</a>
-            <button onclick="logout()">Logout</button>
+            <button id="logoutButton" class="btn btn-danger">Logout</button>
 
         </nav>
 
     </header>
-    <div id="dashboard-content"></div>
     <section class="main-content">
         <!-- Content for the dashboard page -->
        
@@ -32,6 +31,9 @@
             <p>Username: <span id="user-username"></span></p>
             <p>Password: ********</p>
             
+
+            <div id="dashboard-content"></div>
+
             <!-- Add a link to the product adding page -->
         <button><a href="add-product.html">Add Product</a></button>    
     </section>
@@ -52,6 +54,12 @@
         } else {
             // Redirect to the login page if the user is not logged in
             window.location.href = 'login.html';
+        }
+    </script> -->
+</body>
+</html>
+
+
         }
     </script> -->
 </body>
