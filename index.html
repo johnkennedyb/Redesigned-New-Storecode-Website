@@ -12,28 +12,27 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="login.html">Login</a>
-            <!-- <a href="dashboard.html">Dashboard</a> -->
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
-    <section class="main-content">
-        <h2>Shop with Store Code</h2>
+    <section class="main-content home-content">
+        <h2>Welcome to Storecode</h2>
         
         <!-- Shop with Store Code Form -->
-        <form id="shopForm">
+        <form id="shopForm" action="dashboard.html" method="GET">
             <label for="storeCode">Enter Code:</label>
             <input type="text" id="storeCode" name="storeCode" required>
-
-            <button type="button" onclick="submitShopForm()">Submit</button>
+            <button type="submit">Submit</button>
         </form>
+
+        <!-- Placeholder Image -->
+        <!-- <img src="placeholder-image.jpg" alt="Store Image"> -->
     </section>
 
     <footer>
         <p>&copy; 2023 Storecode. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
