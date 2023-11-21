@@ -20,14 +20,14 @@
         <section class="main-content">
             <!-- Content for the "Add Product" page -->
             <h2>Add Product</h2>
-            <form id="add-product-form">
+            <form class="form-group" onsubmit="return addProductFromHome()">
                 <label for="product-name">Product Name:</label>
-                <input type="text" id="product-name" placeholder="Enter product name" required>
-    
+                <input type="text" id="product-name" class="form-control" placeholder="Enter product name" required>
+            
                 <label for="product-link">Product Link:</label>
-                <input type="text" id="product-link" placeholder="Enter product link" required>
-    
-                <button type="button" onclick="addProduct()">Add Product</button>
+                <input type="text" id="product-link" class="form-control" placeholder="Enter product link" required>
+            
+                <button type="submit" class="btn btn-primary">Add Product</button>
             </form>
     
           <!-- Display success or error messages -->
@@ -41,34 +41,8 @@
     <script src="script.js"></script>
     <script>
         // Add product function
-        function addProduct() {
-            // Retrieve values from the form
-            var productName = document.getElementById('product-name').value;
-            var productLink = document.getElementById('product-link').value;
-    
-            // Check if both product name and link are provided
-            if (productName && productLink) {
-                // Save the product to localStorage
-                saveProduct(productName, productLink);
-    
-                // Display the updated list of products on the dashboard
-                displayProducts();
-    
-                // Display a success message
-                var resultMessage = document.getElementById('result-message');
-                resultMessage.textContent = 'Product added successfully!';
-                resultMessage.style.color = 'green';
-    
-                // Clear the form fields
-                document.getElementById('product-name').value = '';
-                document.getElementById('product-link').value = '';
-            } else {
-                // Display an error message if either the name or link is missing
-                var resultMessage = document.getElementById('result-message');
-                resultMessage.textContent = 'Please enter both product name and link.';
-                resultMessage.style.color = 'red';
-            }
-        }
+       
     </script>
 </body>
 </html>
+
